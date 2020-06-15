@@ -1,0 +1,86 @@
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include size-desktop {
+    max-width: $desktop-size-lg;
+    margin: 0 auto;
+    padding: 0 $padding-default;
+    padding-top: 0;
+  }
+
+  &__burger {
+    font-size: $menu-button-size;
+    cursor: pointer;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    display: none;
+
+    @include size-desktop {
+      display: block;
+      margin-right: 48px;
+      margin-left: $padding-default;
+      font-weight: bold;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  &__left {
+    @include size-desktop {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__right {
+    @include size-desktop {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__search {
+    display: none;
+
+    @include size-desktop {
+      position: relative;
+      display: flex;
+      width: 270px;
+      margin-right: $padding-normal;
+    }
+
+    @media (min-width: 1440px) {
+      width: 330px;
+    }
+  }
+
+  &__mining-button {
+    display: none;
+
+    @include size-desktop {
+      position: relative;
+      display: block;
+      min-height: auto;
+      margin: 0 24px;
+      padding: $padding-micro $padding-normal;
+      overflow: hidden;
+
+      &-icon {
+        position: absolute;
+        top: 5px;
+        left: -15px;
+        width: 45px;
+        height: 45px;
+        opacity: 0.15;
+      }
+    }
+  }
+}

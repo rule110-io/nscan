@@ -1,0 +1,7 @@
+.desktop-transaction-payload {
+  &__sigchain {
+    padding: $padding-normal;
+    border-top-left-radius: $app-br;
+    border-top-right-radius: $app-br;
+  }
+}

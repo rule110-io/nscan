@@ -1,0 +1,6 @@
+.desktop-card-container {
+  display: grid;
+  grid-gap: $padding-normal;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 48px;
+}

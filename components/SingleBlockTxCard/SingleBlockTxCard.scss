@@ -1,0 +1,39 @@
+.single-block-tx-card {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $padding-micro;
+    cursor: pointer;
+    transition: $transition-1;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__toggle {
+    transition: $transition-1;
+
+    &_active {
+      transform: scaleY(-1);
+    }
+  }
+
+  &__body {
+    max-height: 0px;
+    overflow: hidden;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: $transition-1, margin 0s,
+      max-height 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &_open {
+      max-height: 1000px;
+      margin-top: $padding-normal;
+      transform: translateY(0%);
+      opacity: 1;
+      transition: $transition-1, margin 0s;
+    }
+  }
+}

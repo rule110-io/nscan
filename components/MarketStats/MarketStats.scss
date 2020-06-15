@@ -1,0 +1,96 @@
+.market-stats {
+  position: relative;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    @include size-desktop {
+      display: flex;
+      justify-content: space-between;
+      max-width: $desktop-size-md;
+      margin: 0 auto;
+    }
+  }
+
+  &__rank {
+    display: inline-block;
+    padding: 8px;
+    color: $white;
+    font-weight: bold;
+    font-size: $font-size-xs;
+    letter-spacing: 0.06em;
+    background-color: #6fcf97;
+    border-radius: $app-br;
+
+    @include size-desktop {
+      display: none;
+    }
+  }
+
+  &__title {
+    color: $white;
+    opacity: 0.75;
+
+    @include size-desktop {
+      font-weight: bold;
+      font-size: $font-size-md;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__number {
+    margin-top: 8px;
+    color: $white;
+    font-weight: bold;
+    font-size: $number-big;
+
+    @include size-desktop {
+      &_small {
+        font-size: $h4-font-size;
+      }
+    }
+  }
+
+  &__change {
+    font-size: $font-size-md;
+
+    &_positive {
+      color: #6fcf97;
+    }
+
+    &_negative {
+      color: #d63649;
+    }
+  }
+
+  &__chart {
+    position: relative;
+    z-index: 1;
+    width: calc(100% + #{$padding-normal} * 4);
+    height: 225px;
+    margin-top: -20px;
+    margin-bottom: -25px;
+    margin-left: -64px;
+
+    @include size-desktop {
+      height: 250px;
+      margin-top: -20px;
+      margin-bottom: -40px;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      display: none;
+
+      @include size-desktop {
+        display: block;
+      }
+    }
+  }
+}

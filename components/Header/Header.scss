@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: calc(100% - (#{$padding-default} * 2));
+  max-height: calc(100vh - #{$padding-normal} * 2);
+  padding: $padding-mobile;
+  color: $header-color;
+  background: $header-gradient;
+
+  @include size-desktop {
+    position: relative;
+    width: 100%;
+    padding: 0;
+  }
+
+  &_open {
+    height: 100%;
+    overflow: auto;
+  }
+}

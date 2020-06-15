@@ -1,0 +1,106 @@
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    display: none;
+    color: $grey-light;
+    font-weight: bold;
+    font-size: $font-size-xs;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @media (min-width: 360px) {
+      display: block;
+    }
+  }
+
+  &__button {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: $padding-micro $padding-default;
+    font-size: $font-size-sm;
+    background-color: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: $app-br;
+    outline: none;
+    cursor: pointer;
+    transition: $transition-1;
+
+    &:hover {
+      border-color: $primary;
+    }
+
+    &_active {
+      color: $primary;
+      border-color: $primary;
+    }
+  }
+
+  &__icon {
+    margin-left: 20px;
+    transition: $transition-1;
+
+    &_open {
+      color: $primary;
+      transform: scaleY(-1);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    min-width: 100%;
+
+    @media (min-width: 360px) {
+      min-width: 220px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    z-index: 3;
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 240px;
+    padding: 12px 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: $white;
+    border: 1px solid #e0e0e0;
+    border-radius: $app-br;
+    transform: translate3d(0%, -8px, 0);
+    opacity: 0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out,
+      width 0.2s ease-in-out, height 0.2s ease-in-out;
+    pointer-events: none;
+
+    @include size-desktop {
+      max-height: unset;
+      overflow-x: unset;
+      overflow-y: unset;
+    }
+
+    &_open {
+      transform: translate3d(0%, 0px, 0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &__item {
+    padding: $padding-micro $padding-default;
+    color: $grey-dark;
+    cursor: pointer;
+    transition: $transition-1;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

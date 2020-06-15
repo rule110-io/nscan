@@ -1,0 +1,9 @@
+$headings: $h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size,
+  $h5-font-size, $h6-font-size;
+
+@for $i from 1 through length($headings) {
+  h#{$i} {
+    font-weight: bold;
+    font-size: nth($headings, $i);
+  }
+}

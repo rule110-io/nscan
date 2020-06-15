@@ -1,0 +1,94 @@
+.mobile-menu {
+  z-index: 100;
+  width: 100%;
+  max-height: 0;
+  padding-top: 0;
+  overflow: hidden;
+  color: $header-color;
+  opacity: 0;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1),
+    padding-top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+  @include size-desktop {
+    display: none;
+  }
+
+  &_open {
+    max-height: 1000px;
+    padding-top: $padding-normal;
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, padding-top 0.2s ease-in-out;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $padding-normal;
+  }
+
+  &__close {
+    font-size: $menu-button-size;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    opacity: 0.8;
+  }
+
+  &__nav {
+    display: grid;
+    grid-gap: $menu-grid-gap;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: $padding-normal;
+    margin-bottom: $padding-medium;
+    &-item {
+      padding: $padding-default;
+      color: $white;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: $secondary;
+      border-radius: $app-br;
+      cursor: pointer;
+      opacity: 0.75;
+      transition: $transition-1;
+
+      &.nuxt-link-active {
+        background-color: $primary;
+        opacity: 1;
+
+        path,
+        g {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+
+      &:active {
+        background-color: lighten($primary, 10%);
+      }
+    }
+
+    &-icon {
+      display: block;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__stats {
+    margin: $padding-default 0;
+    font-weight: bold;
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

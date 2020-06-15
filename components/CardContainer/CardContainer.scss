@@ -1,0 +1,6 @@
+.card-container {
+  display: grid;
+  grid-gap: $card-container-gap;
+  grid-template-columns: repeat(2, 1fr);
+  padding: $padding-default;
+}

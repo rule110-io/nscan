@@ -1,0 +1,64 @@
+.network-stats {
+  position: relative;
+  z-index: 2;
+  padding: $padding-default;
+  background-color: $white;
+  border-radius: 26px 32px 0px 0px;
+
+  @include size-desktop {
+    max-width: $desktop-size-md;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: $app-br;
+    box-shadow: $shadow-1;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #f2f2f2;
+
+    @include size-desktop {
+      grid-gap: 0;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: -63.5px;
+      background-color: transparent;
+    }
+  }
+
+  &__item {
+    padding: 24px;
+    text-align: center;
+    background-color: $white;
+
+    @include size-desktop {
+      padding: 32px;
+      border-radius: $app-br;
+    }
+  }
+
+  &__title {
+    color: $grey-light;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @include size-desktop {
+      font-size: $h5-font-size;
+      letter-spacing: normal;
+    }
+  }
+
+  &__value {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: $number-small;
+
+    @include size-desktop {
+      margin-top: 14px;
+      font-size: $h2-font-size;
+      letter-spacing: 0.06em;
+    }
+  }
+}

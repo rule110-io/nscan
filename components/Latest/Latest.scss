@@ -1,0 +1,71 @@
+.latest {
+  padding: $padding-default;
+
+  @include size-desktop {
+    margin-top: 72px;
+    padding: 0 $padding-default;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include size-desktop {
+      margin-bottom: $padding-default;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+
+    @include size-desktop {
+      display: block;
+      overflow-x: hidden;
+    }
+  }
+
+  &__grid {
+    @include size-desktop {
+      display: grid;
+      grid-gap: 42px;
+      grid-template-columns: repeat(2, calc(50% - 21px));
+      max-width: $desktop-size-md;
+      margin: 0 auto;
+    }
+  }
+
+  &__all {
+    white-space: nowrap;
+
+    @include size-desktop {
+      display: none;
+    }
+  }
+
+  &__button {
+    @include size-desktop {
+      display: inline-block;
+      width: auto;
+      padding: $padding-default 54px;
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include size-desktop {
+      display: block;
+      margin-top: $padding-normal;
+      margin-bottom: 96px;
+      text-align: center;
+    }
+  }
+}

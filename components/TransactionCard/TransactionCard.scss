@@ -1,0 +1,22 @@
+.transaction-card {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: $padding-default;
+  }
+
+  &__timestamp {
+    margin-left: 8px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-sm;
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

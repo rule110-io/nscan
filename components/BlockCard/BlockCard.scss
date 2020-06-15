@@ -1,0 +1,48 @@
+.block-card {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: $padding-default;
+  }
+
+  &__height {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    transition: $transition-1;
+
+    &:hover {
+      color: darken($primary, 20%);
+      .block-card__icon {
+        g {
+          fill: darken($primary, 20%);
+        }
+      }
+    }
+  }
+
+  &__txs {
+    margin-bottom: 8px;
+  }
+
+  &__timestamp {
+    flex: 1;
+  }
+
+  &__miner {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+
+    g {
+      opacity: 1;
+      transition: $transition-1;
+      fill: $primary;
+    }
+  }
+}

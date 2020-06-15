@@ -1,0 +1,25 @@
+.desktop-card {
+  box-sizing: border-box;
+  padding: $padding-normal;
+  background: $card-bg;
+  border-radius: $app-br;
+  box-shadow: $shadow-2;
+
+  &_width {
+    &_full {
+      grid-column: span 12;
+    }
+
+    &_half {
+      grid-column: span 6;
+    }
+
+    &_third {
+      grid-column: span 4;
+    }
+
+    &_quarter {
+      grid-column: span 3;
+    }
+  }
+}

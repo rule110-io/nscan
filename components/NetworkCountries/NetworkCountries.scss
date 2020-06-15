@@ -1,0 +1,130 @@
+.network-countries {
+  margin-top: $padding-medium;
+
+  @include size-desktop {
+    margin-top: 75px;
+  }
+
+  &__table {
+    width: 100%;
+    font-size: $font-size-xs;
+
+    @include size-desktop {
+      font-size: $font-size-md;
+    }
+  }
+
+  &__header {
+    color: #95aac9;
+    letter-spacing: 0.06em;
+    background: #f9fbfd;
+    border-radius: $app-br;
+  }
+
+  &__title {
+    padding: $padding-micro;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include size-desktop {
+      padding: $padding-default $padding-normal;
+    }
+
+    &:first-child {
+      width: 1%;
+    }
+
+    &:last-child {
+      text-align: right;
+
+      @include size-desktop {
+        width: 15%;
+      }
+    }
+
+    &:nth-child(3) {
+      display: none;
+      @include size-desktop {
+        display: table-cell;
+        width: 55%;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: $padding-default $padding-micro;
+    font-weight: normal;
+    text-align: left;
+
+    @include size-desktop {
+      padding: $padding-default;
+    }
+
+    &_country {
+      max-width: 50px;
+      overflow: hidden;
+    }
+
+    &_percentage {
+      display: none;
+
+      @include size-desktop {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &:first-child {
+      text-align: center;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  &__row {
+    &_type {
+      &_data {
+        border-bottom: 1px solid #f2f2f2;
+      }
+    }
+  }
+
+  &__flag {
+    position: absolute;
+    top: 8px;
+    margin: -5px -5px -5px -16px;
+  }
+
+  &__country {
+    margin-left: 40px;
+  }
+
+  &__percentage {
+    display: none;
+
+    @include size-desktop {
+      display: inline-block;
+      height: 7px;
+      background-color: $primary;
+      border-radius: 3px;
+    }
+  }
+
+  &__toggle {
+    display: inline-block;
+    margin-top: $padding-default;
+
+    @include size-desktop {
+      margin-top: $padding-normal;
+    }
+  }
+
+  &__button {
+    @include size-desktop {
+      padding: $padding-micro $padding-default;
+    }
+  }
+}

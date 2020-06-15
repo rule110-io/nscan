@@ -1,0 +1,9 @@
+@mixin size-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+%size-desktop {
+  @include size-desktop;
+}

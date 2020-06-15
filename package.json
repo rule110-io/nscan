@@ -1,0 +1,87 @@
+{
+  "name": "nkn-explorer",
+  "version": "1.0.0",
+  "description": "With our NKN explorer you can easily browse the whole blockchain of the NKN Network. See the way your packets travel around the world in the most decentralized data relay network powered by Cellular Automata.",
+  "author": "NKNx Team",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "yarn run eslint && yarn run stylelint",
+    "lint:fix": "yarn run eslint:fix && yarn run stylelint:fix",
+    "eslint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "eslint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore . --ignore-pattern '/dist/'",
+    "stylelint": "stylelint **/*{.css,.scss}",
+    "stylelint:fix": "stylelint **/*{.css,.scss} --fix",
+    "vue-i18n-extract": "vue-i18n-extract"
+  },
+  "lint-staged": {
+    "*.(css|scss)": [
+      "stylelint --fix"
+    ],
+    "*.{js,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.4.1",
+    "@amcharts/amcharts4-geodata": "^4.1.4",
+    "@nuxtjs/axios": "^5.5.4",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/moment": "^1.2.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.14",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.5",
+    "i18n-iso-countries": "^6.0.0",
+    "nuxt": "^2.10.2",
+    "nuxt-clipboard2": "^0.2.1",
+    "nuxt-i18n": "^6.12.2",
+    "nuxt-mq": "^2.0.0",
+    "nuxt-svg-loader": "^1.0.1",
+    "vue-code-highlight": "^0.7.2",
+    "vue-content-loader": "^0.2.1",
+    "vue-country-flag": "^2.0.1",
+    "vue-fragment": "^1.5.1",
+    "vue-pusher": "^1.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": ">=12.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": ">=2.14.0",
+    "eslint-plugin-jest": ">=21.24.1",
+    "eslint-plugin-node": ">=7.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": ">=4.0.1",
+    "eslint-plugin-standard": ">=4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "lint-staged": "^10.2.10",
+    "node-sass": "^4.12.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^13.6.0",
+    "stylelint-config-airbnb": "^0.0.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.17.2",
+    "vue-i18n-extract": "^1.1.1"
+  }
+}

@@ -1,0 +1,28 @@
+.single-address-info {
+  &__balance {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      98.23deg,
+      #494b88 4.48%,
+      #9c95dc 97.21%
+    ) !important;
+
+    * {
+      color: $white;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    width: 110px;
+    height: 110px;
+
+    path {
+      opacity: 0.12;
+      fill: #31325a;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+/*========== Custom Variable ==========*/
+
+// Grid system
+
+// Set the number of columns you want to use on your layout.
+$flexboxgrid-grid-columns: 12 !default;
+// Set the gutter between columns.
+$flexboxgrid-gutter-width: 1rem !default;
+// Set a margin for the container sides.
+$flexboxgrid-outer-margin: 2rem !default;
+// Create or remove breakpoints for your project
+$flexboxgrid-breakpoints: sm 48em 46rem, md 62em 61rem, lg 75em 71rem !default;
+$flexboxgrid-max-width: 1200px !default;
+
+$gutter-compensation: $flexboxgrid-gutter-width * 1 * -1;
+$half-gutter-width: $flexboxgrid-gutter-width * 1;
+
+// App Global Font Size
+$html-font-size: 16px;
+
+// App Font Family
+$html-font-family: 'Inter', Arial;
+
+// Media Size
+$desktop-size-sm: 956px;
+$desktop-size-md: 1200px;
+$desktop-size-lg: 1440px;
+
+//Default Colors
+$white: #fff;
+$black: #000;
+$base: #f1f2f8;
+$grey-dark: #333333;
+$grey-light: #bdbdbd;
+$dark-blue: #2f3561;
+
+//Theme colors
+$primary: #1791f2 !default;
+$secondary: #2d397c !default;
+
+//App Theme Color
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'grey-dark': $grey-dark,
+    'grey-light': $grey-light,
+  ),
+  $theme-colors
+);
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 500;
+$font-weight-bold: 700;
+
+// App Text Scale
+$text-default: $grey-dark;
+$text-light: $grey-light;
+$text-primary: $primary;
+
+// Setting for the Typography elements.
+$font-size-xs: 0.75rem !default; // 12px
+$font-size-sm: 0.8125rem !default; // 13px
+$font-size-md: 0.875rem !default; // 14px
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: 1.125rem !default; // 18px
+
+// Setting For Heading Element
+$h1-font-size: 1.875rem !default; // 30px;
+$h2-font-size: 1.5rem !default; // 24px
+$h3-font-size: 1.3125rem !default; // 21px
+$h4-font-size: 1.125rem !default; // 18x
+$h5-font-size: 1rem !default; // 16px
+$h6-font-size: 0.75rem !default; // 12px
+
+// Setting For Numbers
+$number-big: 2.25rem; // 36px
+$number-medium: 1.875rem; // 30px
+$number-small: 1.125rem; // 18px
+
+//Shadows
+$shadow-1: 0px 3px 24px rgba(12, 23, 61, 0.12);
+$shadow-2: 0px 6px 16px rgba(0, 0, 0, 0.03);
+// Gradient Theme Color
+$gradient-1: linear-gradient(90.78deg, #0b163c 17.75%, #303159 84.46%);
+$gradient-2: linear-gradient(319.62deg, #0b163c 0.79%, #303159 96.67%);
+
+// Transitions
+$transition-1: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+$transition-2: 0.3s ease-in-out all;
+$transition-3: 0.4s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+
+// Settings for the `<body>` element.
+$body-bg: $base;
+$body-color: $text-default;
+$body-font: $html-font-family;
+
+// App Spacing
+$padding-micro: 12px;
+$padding-small: 14px;
+$padding-default: 16px;
+$padding-normal: 24px;
+$padding-medium: 40px;
+$padding-big: 52px;
+$padding-max: 64px;
+
+// Device Spacing
+$padding-mobile: $padding-normal $padding-default;
+
+// App Custom Settings
+$app-br: 5px;
+
+// Borders
+$border-1: 1px solid rgba(255, 255, 255, 0.25);
+
+// Header
+$header-gradient: $gradient-1;
+$header-color: $white;
+$header-size: 74px;
+
+// Menu
+$menu-button-size: 24px;
+$menu-grid-gap: 16px;
+
+// Footer
+$footer-gradient: $gradient-2;
+$footer-color: $white;
+
+// Start Mining
+$start-mining-bg: rgba(#9c95dc, 0.9);
+
+// Card Container
+$card-container-gap: 8px;
+
+// Card
+$card-bg: $white;
+$card-padding: $padding-default;
+
+// Page-header
+$page-header-spacing: $padding-default $padding-medium $padding-normal
+  $padding-medium;
+
+// Transactions
+$tx-reward-color: #6fcf97;
+$tx-transfer-color: #9c95dc;
+$tx-sigchain-color: #f2994a;
+$tx-nanopay-color: #f24a4a;
+$tx-subscription-color: #f4d94f;
+$tx-wallet-name-registration-color: #5b70cc;
+$tx-wallet-name-transfer-color: #e98dd5;
+$tx-wallet-name-deletion-color: #cc5bc9;
+$tx-generate-id: #e97373;
+$tx-br: 4px;
+$tx-transform: matrix(0.5, 0.87, -0.87, 0.5, 0, 0);
+$tx-size: 12px;

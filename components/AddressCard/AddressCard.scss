@@ -1,0 +1,19 @@
+.address-card {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: $padding-default;
+    font-size: $font-size-sm;
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__item {
+    font-size: $font-size-xs;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

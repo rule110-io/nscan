@@ -1,0 +1,65 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  padding: $padding-small;
+  font-weight: bold;
+  font-size: inherit;
+  text-align: center;
+  text-decoration: none;
+  background: $white;
+  border: unset;
+  border-radius: $app-br;
+  outline: none;
+  cursor: pointer !important;
+  transition: $transition-1;
+
+  &_theme {
+    &_primary {
+      min-height: 50px;
+      color: $white;
+      background-color: $primary;
+
+      &:hover {
+        background-color: lighten($primary, 10%);
+      }
+
+      &:active {
+        background-color: lighten($primary, 20%);
+      }
+    }
+
+    &_dark-blue {
+      min-height: 50px;
+      color: $white;
+      background-color: $dark-blue;
+
+      &:hover {
+        background-color: lighten($dark-blue, 10%);
+      }
+
+      &:active {
+        background-color: lighten($dark-blue, 20%);
+      }
+    }
+
+    &_ghost {
+      padding: 8px $padding-default;
+      color: $primary;
+      border: 1px solid $primary;
+
+      &:hover {
+        color: darken($primary, 20%);
+        border-color: darken($primary, 20%);
+      }
+
+      &:active {
+        color: lighten($primary, 20%);
+        border-color: lighten($primary, 20%);
+      }
+    }
+  }
+
+  &_full {
+    width: 100%;
+  }
+}

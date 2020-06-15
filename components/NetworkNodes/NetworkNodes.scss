@@ -1,0 +1,91 @@
+.network-nodes {
+  margin-top: 8px;
+  padding: $padding-medium $padding-default 0 $padding-default;
+  font-weight: bold;
+  text-align: center;
+  background: $white;
+
+  @include size-desktop {
+    margin-top: 0;
+    padding-top: 80px;
+    padding-bottom: 72px;
+  }
+
+  &__wrapper {
+    @include size-desktop {
+      max-width: $desktop-size-md;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    @include size-desktop {
+      font-size: $h1-font-size;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 8px;
+    margin-bottom: $padding-normal;
+    color: $grey-light;
+    font-weight: normal;
+    font-size: $font-size-xs;
+
+    @include size-desktop {
+      margin-bottom: 46px;
+      color: $body-color;
+      font-size: $font-size-base;
+    }
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-around;
+
+    &-title {
+      margin-bottom: 8px;
+      color: $grey-light;
+      letter-spacing: 0.06em;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include size-desktop {
+        margin-bottom: 14px;
+        font-size: $h5-font-size;
+      }
+    }
+
+    &-value {
+      font-size: $number-small;
+      letter-spacing: 0.06em;
+      text-align: center;
+
+      @include size-desktop {
+        font-size: $h2-font-size;
+      }
+    }
+
+    &-item {
+      @include size-desktop {
+        flex: 1;
+
+        &:last-child {
+          display: block;
+        }
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__map {
+    height: 340px;
+    margin-top: $padding-medium;
+
+    @include size-desktop {
+      height: 580px;
+      margin-top: 46px;
+    }
+  }
+}

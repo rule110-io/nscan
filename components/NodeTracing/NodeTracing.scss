@@ -1,0 +1,170 @@
+.node-tracing {
+  background: $white;
+
+  &_spacing {
+    padding: $padding-normal $padding-default;
+  }
+
+  &__labels {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: $padding-default;
+    padding: $padding-micro;
+    border-radius: $app-br;
+
+    &:not(:last-child) {
+      &:after {
+        position: absolute;
+        bottom: -$padding-default;
+        left: 28px;
+        display: block;
+        width: 1px;
+        height: $padding-default;
+        background-color: #e0e0e0;
+        content: '';
+      }
+    }
+
+    &_type {
+      &_send {
+        background: linear-gradient(97.76deg, #0a58e5 4.48%, #4abdff 97.21%);
+
+        .node-tracing__heading {
+          color: $white;
+        }
+
+        .node-tracing__label {
+          color: $primary;
+          background-color: #dceffd;
+        }
+      }
+
+      &_recieve {
+        background: linear-gradient(101.83deg, #07c881 -5.03%, #58daaa 106.01%);
+
+        .node-tracing__heading {
+          color: $white;
+        }
+
+        .node-tracing__label {
+          color: #27ae60;
+          background-color: #eaf8f0;
+        }
+      }
+
+      &_relay {
+        border: 1px solid #e0e0e0;
+
+        &:after {
+          bottom: calc(#{-$padding-default} - 1px) !important;
+          left: 27px !important;
+        }
+
+        .node-tracing__label {
+          color: #bb6bd9;
+          background-color: #f5e9f9;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    position: relative;
+    font-weight: bold;
+    font-size: $font-size-sm;
+
+    @include size-desktop {
+      font-size: $font-size-base;
+    }
+  }
+
+  &__label {
+    padding: 7px;
+    font-weight: bold;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 4px;
+
+    @include size-desktop {
+      padding: 8px;
+      font-size: $font-size-xs;
+    }
+
+    &:first-child {
+      margin-right: 6px;
+
+      @include size-desktop {
+        margin-right: $padding-micro;
+      }
+    }
+
+    &_winner {
+      color: #f4d94f !important;
+      background-color: #f5f2e6 !important;
+    }
+  }
+
+  &__pk {
+    margin-top: $padding-micro;
+    overflow: hidden;
+    color: $white;
+    font-size: $font-size-xs;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include size-desktop {
+      font-size: $font-size-md;
+    }
+  }
+
+  &__addr {
+    margin-top: $padding-micro;
+    overflow: hidden;
+    font-size: $font-size-xs;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include size-desktop {
+      font-size: $font-size-md;
+    }
+  }
+
+  &__full {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $padding-normal;
+  }
+
+  &__flag {
+    position: absolute;
+    top: -12px;
+    left: 24px;
+
+    @include size-desktop {
+      top: -10px;
+      left: 36px;
+    }
+  }
+}
