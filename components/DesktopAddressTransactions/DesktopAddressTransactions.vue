@@ -61,41 +61,39 @@ export default {
   },
   methods: {
     getAddressTransactions (page) {
-      const self = this
-
       // Checking if page exists
       if (page === null) {
         return false
       }
 
-      self.loading = true
+      this.loading = true
 
       // Disabling pagination untill data fetched
-      self.nextPage = null
-      self.prevPage = null
+      this.nextPage = null
+      this.prevPage = null
 
       // Fetcing data
       this.$axios
         .$get(`addresses/${this.address.address}/transactions?page=${page}`)
-        .then(function (response) {
+        .then((response) => {
           const {
             data,
-            currentPage,
-            prevPageUrl,
-            nextPageUrl,
+            current_page: currentPage,
+            prev_page_url: prevPageUrl,
+            next_page_url: nextPageUrl,
             from,
             to
           } = response
 
-          self.transactions = data
+          this.transactions = data
 
-          self.from = from
-          self.to = to
-          self.currentPage = currentPage
-          self.prevPage = prevPageUrl != null ? self.currentPage - 1 : null
-          self.nextPage = nextPageUrl != null ? self.currentPage + 1 : null
+          this.from = from
+          this.to = to
+          this.currentPage = currentPage
+          this.prevPage = prevPageUrl != null ? this.currentPage - 1 : null
+          this.nextPage = nextPageUrl != null ? this.currentPage + 1 : null
 
-          self.loading = false
+          this.loading = false
         })
     }
   }

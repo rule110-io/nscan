@@ -157,10 +157,9 @@ export default {
       this.getTransactions(this.currentPage)
     },
     getTransactions (page) {
-      const self = this
-      const filter = self.activeFilter.value
+      const filter = this.activeFilter.value
 
-      self.loading = true
+      this.loading = true
 
       // Checking if page exists
       if (page === null) {
@@ -174,33 +173,33 @@ export default {
           : `transactions?page=${page}&txType=${filter}`
 
       // Disabling pagination untill data fetched
-      self.nextPage = null
-      self.prevPage = null
+      this.nextPage = null
+      this.prevPage = null
 
       // Fetcing data
-      this.$axios.$get(query).then(function (response) {
+      this.$axios.$get(query).then((response) => {
         const { avgSize, sumTransactions, transactions } = response
         const {
           data,
-          currentPage,
-          prevPageUrl,
-          nextPageUrl,
+          current_page: currentPage,
+          prev_page_url: prevPageUrl,
+          next_page_url: nextPageUrl,
           from,
           to
         } = transactions
 
-        self.avgSize = avgSize
-        self.sumTransactions = sumTransactions
-        self.transactions = data
+        this.avgSize = avgSize
+        this.sumTransactions = sumTransactions
+        this.transactions = data
 
-        self.from = from
-        self.to = to
-        self.currentPage = currentPage
+        this.from = from
+        this.to = to
+        this.currentPage = currentPage
 
-        self.prevPage = prevPageUrl != null ? self.currentPage - 1 : null
-        self.nextPage = nextPageUrl != null ? self.currentPage + 1 : null
+        this.prevPage = prevPageUrl != null ? this.currentPage - 1 : null
+        this.nextPage = nextPageUrl != null ? this.currentPage + 1 : null
 
-        self.loading = false
+        this.loading = false
       })
     }
   }
