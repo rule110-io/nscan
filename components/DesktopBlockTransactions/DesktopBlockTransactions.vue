@@ -81,9 +81,9 @@ export default {
         .then((response) => {
           const {
             data,
-            currentPage,
-            prevPageUrl,
-            nextPageUrl,
+            current_page: currentPage,
+            prev_page_url: prevPageUrl,
+            next_page_url: nextPageUrl,
             from,
             to
           } = response

@@ -195,12 +195,11 @@ export default {
       }
     },
     getTx () {
-      const self = this
       const txHash = this.$route.params.id
 
-      this.$axios.$get(`transactions/${txHash}`).then(function (response) {
-        self.tx = response
-        self.loading = false
+      this.$axios.$get(`transactions/${txHash}`).then((response) => {
+        this.tx = response
+        this.loading = false
       })
     }
   }
