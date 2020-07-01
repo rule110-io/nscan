@@ -1,6 +1,6 @@
 {
   "name": "nkn-explorer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "With our NKN explorer you can easily browse the whole blockchain of the NKN Network. See the way your packets travel around the world in the most decentralized data relay network powered by Cellular Automata.",
   "author": "NKNx Team",
   "private": true,
