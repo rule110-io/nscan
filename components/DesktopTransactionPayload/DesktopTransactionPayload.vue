@@ -109,13 +109,13 @@
       <DesktopCard width="quarter">
         <div class="card__title">{{ $t('identifier') }}</div>
         <div class="desktop-card__item">
-          {{ tx.payload.identifier | hexConverter }}
+          {{ tx.payload.identifier  }}
         </div>
       </DesktopCard>
       <DesktopCard width="quarter">
         <div class="card__title">{{ $t('topic') }}</div>
         <div class="desktop-card__item">
-          {{ tx.payload.topic | hexConverter }}
+          {{ tx.payload.topic  }}
         </div>
       </DesktopCard>
       <DesktopCard width="quarter">
@@ -157,7 +157,7 @@
       <DesktopCard width="quarter">
         <div class="card__title">{{ $t('registeredName') }}</div>
         <div class="desktop-card__item">
-          {{ tx.payload.name | hexConverter }}
+          {{ tx.payload.name  }}
         </div>
       </DesktopCard>
       <DesktopCard width="quarter">
@@ -206,7 +206,7 @@
       <DesktopCard width="half">
         <div class="card__title">{{ $t('transferedName') }}</div>
         <div class="desktop-card__item">
-          {{ tx.payload.name | hexConverter }}
+          {{ tx.payload.name  }}
         </div>
       </DesktopCard>
     </DesktopCardContainer>
@@ -234,7 +234,7 @@
       <DesktopCard width="half">
         <div class="card__title">{{ $t('deletedName') }}</div>
         <div class="desktop-card__item">
-          {{ tx.payload.name | hexConverter }}
+          {{ tx.payload.name  }}
         </div>
       </DesktopCard>
     </DesktopCardContainer>

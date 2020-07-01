@@ -110,11 +110,11 @@
           <div class="desktop-tx__content">
             <div class="desktop-tx__item text_align_left">
               <div class="desktop-tx__title">{{ $t('identifier') }}</div>
-              <div>{{ tx.payload.identifier | hexConverter }}</div>
+              <div>{{ tx.payload.identifier  }}</div>
             </div>
             <div class="desktop-tx__item text_align_left">
               <div class="desktop-tx__title">{{ $t('topic') }}</div>
-              <div>{{ tx.payload.topic | hexConverter }}</div>
+              <div>{{ tx.payload.topic  }}</div>
             </div>
             <div class="desktop-tx__item text_align_left">
               <div class="desktop-tx__title">{{ $t('bucket') }}</div>
@@ -149,7 +149,7 @@
             </div>
             <div class="desktop-tx__item text_align_center">
               <div class="desktop-tx__title">{{ $t('registeredName') }}</div>
-              {{ tx.payload.name | hexConverter }}
+              {{ tx.payload.name  }}
             </div>
           </div>
         </template>
@@ -185,7 +185,7 @@
             </div>
             <div class="desktop-tx__item text_align_center">
               <div class="desktop-tx__title">{{ $t('transferedName') }}</div>
-              {{ tx.payload.name | hexConverter }}
+              {{ tx.payload.name  }}
             </div>
           </div>
         </template>
@@ -208,7 +208,7 @@
             </div>
             <div class="desktop-tx__item text_align_center">
               <div class="desktop-tx__title">{{ $t('deletedName') }}</div>
-              {{ tx.payload.name | hexConverter }}
+              {{ tx.payload.name  }}
             </div>
           </div>
         </template>

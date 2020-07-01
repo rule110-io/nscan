@@ -103,13 +103,13 @@
       <Card>
         <div class="card__title">{{ $t('identifier') }}</div>
         <div class="card__text text_size_md">
-          {{ tx.payload.identifier | hexConverter }}
+          {{ tx.payload.identifier  }}
         </div>
       </Card>
       <Card>
         <div class="card__title">{{ $t('topic') }}</div>
         <div class="card__text text_size_md">
-          {{ tx.payload.topic | hexConverter }}
+          {{ tx.payload.topic  }}
         </div>
       </Card>
       <Card>
@@ -132,7 +132,7 @@
     <CardContainer v-if="tx.txType === 'REGISTER_NAME_TYPE'">
       <Card>
         <div class="card__title">{{ $t('registeredName') }}</div>
-        <div class="card__text">{{ tx.payload.name | hexConverter }}</div>
+        <div class="card__text">{{ tx.payload.name  }}</div>
       </Card>
       <Card>
         <div class="card__title">{{ $t('registrant') }}</div>
@@ -161,7 +161,7 @@
     <CardContainer v-if="tx.txType === 'TRANSFER_NAME_TYPE'">
       <Card>
         <div class="card__title">{{ $t('transferedName') }}</div>
-        <div class="card__text">{{ tx.payload.name | hexConverter }}</div>
+        <div class="card__text">{{ tx.payload.name  }}</div>
       </Card>
       <Card>
         <div class="card__title">{{ $t('registrant') }}</div>
@@ -199,7 +199,7 @@
     <CardContainer v-if="tx.txType === 'DELETE_NAME_TYPE'">
       <Card>
         <div class="card__title">{{ $t('deletedName') }}</div>
-        <div class="card__text">{{ tx.payload.name | hexConverter }}</div>
+        <div class="card__text">{{ tx.payload.name  }}</div>
       </Card>
       <Card>
         <div class="card__title">{{ $t('registrant') }}</div>
