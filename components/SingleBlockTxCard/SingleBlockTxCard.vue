@@ -196,14 +196,14 @@
         <div class="card__item">
           <div class="card__title">{{ $t('identifier') }}</div>
           <div class="card__text text_size_md">
-            {{ tx.payload.identifier | hexConverter }}
+            {{ tx.payload.identifier  }}
           </div>
         </div>
 
         <div class="card__item">
           <div class="card__title">{{ $t('topic') }}</div>
           <div class="card__text text_size_md">
-            {{ tx.payload.topic | hexConverter }}
+            {{ tx.payload.topic  }}
           </div>
         </div>
 
@@ -251,7 +251,7 @@
         <div class="card__item">
           <div class="card__title">{{ $t('registeredName') }}</div>
           <div class="card__text text_size_md">
-            {{ tx.payload.name | hexConverter }}
+            {{ tx.payload.name  }}
           </div>
         </div>
         <div class="card__item">
@@ -303,7 +303,7 @@
         <div class="card__item">
           <div class="card__title">{{ $t('transferedName') }}</div>
           <div class="card__text text_size_md">
-            {{ tx.payload.name | hexConverter }}
+            {{ tx.payload.name  }}
           </div>
         </div>
         <div class="card__item">
@@ -364,7 +364,7 @@
         <div class="card__item">
           <div class="card__title">{{ $t('deletedName') }}</div>
           <div class="card__text text_size_md">
-            {{ tx.payload.name | hexConverter }}
+            {{ tx.payload.name  }}
           </div>
         </div>
         <div class="card__item">
