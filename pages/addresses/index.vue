@@ -116,6 +116,11 @@ export default {
         this.loading = false
       })
     }
+  },
+  head () {
+    return {
+      title: this.$t('addresses')
+    }
   }
 }
 </script>
