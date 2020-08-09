@@ -153,7 +153,6 @@ import DesktopTransactionInfo from '~/components/DesktopTransactionInfo/DesktopT
 import DesktopTransactionPayload from '~/components/DesktopTransactionPayload/DesktopTransactionPayload'
 
 export default {
-  transition: 'expand',
   components: {
     GetBack,
     SingleTransactionInfo,
@@ -202,6 +201,12 @@ export default {
         this.loading = false
       })
     }
-  }
+  },
+  head () {
+    return {
+      title: this.$t('transaction')
+    }
+  },
+  transition: 'expand'
 }
 </script>
