@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: '%s | nScan.io - the official NKN explorer',
+    titleTemplate: '%s | nScan.io - the official NKN explorer',
     meta: [
       { charset: 'utf-8' },
       {
