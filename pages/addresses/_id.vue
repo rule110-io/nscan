@@ -85,7 +85,6 @@ import DesktopAddressInfo from '~/components/DesktopAddressInfo/DesktopAddressIn
 import DesktopAddressTransactions from '~/components/DesktopAddressTransactions/DesktopAddressTransactions'
 
 export default {
-  transition: 'expand',
   components: {
     GetBack,
     SingleAddressInfo,
@@ -139,6 +138,13 @@ export default {
         this.loading = false
       })
     }
-  }
+  },
+  head () {
+    return {
+      title: this.$t('addressDetails')
+    }
+  },
+  transition: 'expand'
+
 }
 </script>

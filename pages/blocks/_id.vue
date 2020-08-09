@@ -74,7 +74,6 @@ import DesktopBlockInfo from '~/components/DesktopBlockInfo/DesktopBlockInfo'
 import DesktopBlockTransactions from '~/components/DesktopBlockTransactions/DesktopBlockTransactions'
 
 export default {
-  transition: 'expand',
   components: {
     GetBack,
     SingleBlockInfo,
@@ -120,6 +119,12 @@ export default {
         this.loading = false
       })
     }
-  }
+  },
+  head () {
+    return {
+      title: this.$t('block')
+    }
+  },
+  transition: 'expand'
 }
 </script>
