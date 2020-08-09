@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'NKN Explorer',
+    title: '%s | nScan.io - the official NKN explorer',
     meta: [
       { charset: 'utf-8' },
       {
@@ -23,29 +23,29 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description },
       { name: 'msapplication-TileColor', content: '#0b163c' },
       { name: 'theme-color', content: '#ffffff' },
-      { name: 'og:title', content: 'NKN Explorer' },
+      { name: 'og:title', content: 'nScan.io - The official NKN Explorer' },
       {
         name: 'og:description',
         content:
-          'With our NKN explorer you can easily browse the whole blockchain of the NKN Network.'
+          'nScan is the official NKN mainnet explorer. With it you can easily discover all blocks, transactions and addresses at one place.'
       },
       { name: 'og:type', content: 'website' },
       { name: 'og:url', content: '/' },
-      { name: 'og:image', content: 'https://explorer.nknx.org/thumbnail.jpg' },
+      { name: 'og:image', content: 'https://nscan.io/thumbnail.jpg' },
       // Twitter Card
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@nknX_org' },
-      { name: 'twitter:title', content: 'NKN Explorer' },
+      { name: 'twitter:site', content: '@rule110_io' },
+      { name: 'twitter:title', content: 'nScan.io - The official NKN Explorer' },
       {
         name: 'twitter:description',
         content:
-          'With our NKN explorer you can easily browse the whole blockchain of the NKN Network.'
+          'nScan is the official NKN mainnet explorer. With it you can easily discover all blocks, transactions and addresses at one place.'
       },
       {
         name: 'twitter:image',
-        content: 'https://explorer.nknx.org/thumbnail.jpg'
+        content: 'https://nscan.io/thumbnail.jpg'
       },
-      { name: 'twitter:image:alt', content: 'NKN Explorer Logo' }
+      { name: 'twitter:image:alt', content: 'nScan logo' }
     ],
     link: [
       {
