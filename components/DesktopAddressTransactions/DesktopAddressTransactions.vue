@@ -43,6 +43,10 @@ export default {
       default () {
         return {}
       }
+    },
+    filter: {
+      type: String,
+      default: 'all'
     }
   },
   data: () => {
@@ -54,6 +58,11 @@ export default {
       currentPage: 1,
       from: 0,
       to: 0
+    }
+  },
+  watch: {
+    filter () {
+      this.getAddressTransactions(this.currentPage)
     }
   },
   mounted () {
@@ -72,9 +81,15 @@ export default {
       this.nextPage = null
       this.prevPage = null
 
+      // Making query depending on filter
+      const query =
+        this.filter === 'all'
+          ? `page=${page}`
+          : `page=${page}&txType=${this.filter}`
+
       // Fetcing data
       this.$axios
-        .$get(`addresses/${this.address.address}/transactions?page=${page}`)
+        .$get(`addresses/${this.address.address}/transactions?${query}`)
         .then((response) => {
           const {
             data,

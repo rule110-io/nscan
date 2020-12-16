@@ -234,10 +234,10 @@ a {
 }
 
 .single-page-header {
+  position: relative;
   box-sizing: border-box;
   max-height: 1000px;
   padding: $padding-default;
-  overflow: hidden;
   background: $white;
   transition: max-height 0.5s ease-in-out;
 
