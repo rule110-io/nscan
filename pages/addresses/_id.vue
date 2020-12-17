@@ -38,6 +38,14 @@
             class="single-page-header__tx-price"
           >${{ ((address.balance / 100000000) * currentPrice).toFixed(2) | commaNumber }}</div>
         </div>
+        <mq-layout mq="lg">
+          <DesktopTransactionFilter
+            style="position: absolute; right: 130px; bottom: 36px;"
+            :filters="filters"
+            :active-filter="activeFilter"
+            @update="updateFilters"
+          />
+        </mq-layout>
         <div class="single-page-header__switches">
           <CardSwitch
             :active="activeGeneral"
@@ -63,7 +71,7 @@
       <DesktopWrapper>
         <TableLoader v-if="loading" :count="5" />
         <DesktopAddressInfo v-if="!loading" :address="address" />
-        <DesktopAddressTransactions v-if="!loading" :address="address" />
+        <DesktopAddressTransactions v-if="!loading" :address="address" :filter="activeFilter.value"/>
       </DesktopWrapper>
     </mq-layout>
   </section>
@@ -83,6 +91,7 @@ import TableLoader from '~/components/Loaders/TableLoader'
 import DesktopWrapper from '~/components/DesktopWrapper/DesktopWrapper'
 import DesktopAddressInfo from '~/components/DesktopAddressInfo/DesktopAddressInfo'
 import DesktopAddressTransactions from '~/components/DesktopAddressTransactions/DesktopAddressTransactions'
+import DesktopTransactionFilter from '~/components/DesktopTransactionFilter/DesktopTransactionFilter'
 
 export default {
   components: {
@@ -96,7 +105,8 @@ export default {
     TableLoader,
     DesktopWrapper,
     DesktopAddressInfo,
-    DesktopAddressTransactions
+    DesktopAddressTransactions,
+    DesktopTransactionFilter
   },
   data: () => {
     return {
@@ -104,7 +114,53 @@ export default {
       loading: true,
       activeGeneral: true,
       activeTx: false,
-      copied: false
+      copied: false,
+      filters: [
+        {
+          title: 'allTransactions',
+          value: 'all'
+        },
+        {
+          title: 'miningReward',
+          value: 'COINBASE_TYPE'
+        },
+        {
+          title: 'transfer',
+          value: 'TRANSFER_ASSET_TYPE'
+        },
+        {
+          title: 'signatureChain',
+          value: 'SIG_CHAIN_TXN_TYPE'
+        },
+        {
+          title: 'subscription',
+          value: 'SUBSCRIBE_TYPE'
+        },
+        {
+          title: 'generateId',
+          value: 'GENERATE_ID_TYPE'
+        },
+        {
+          title: 'nanopay',
+          value: 'NANO_PAY_TYPE'
+        },
+        {
+          title: 'walletNameRegistration',
+          value: 'REGISTER_NAME_TYPE'
+        },
+        {
+          title: 'walletNameTransfer',
+          value: 'TRANSFER_NAME_TYPE'
+        },
+        {
+          title: 'walletNameDeletion',
+          value: 'DELETE_NAME_TYPE'
+        }
+      ],
+      activeFilter: {
+        title: 'allTransactions',
+        value: 'all'
+      }
     }
   },
   computed: mapGetters({
@@ -114,6 +170,9 @@ export default {
     this.getAddress()
   },
   methods: {
+    updateFilters (filter) {
+      this.activeFilter = filter
+    },
     toggleCopied () {
       this.copied = true
       setTimeout(() => { this.copied = false }, 1000)
