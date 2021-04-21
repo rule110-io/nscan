@@ -17,7 +17,7 @@ export default {
   mounted () {
     const chart = am4core.create(this.$refs.chartdiv, am4charts.XYChart)
     const data = []
-    const price = this.dailyHistoryPrice.USD
+    const price = this.dailyHistoryPrice
 
     const priceArray = price.map(i => i.price)
     const minPrice = Math.min.apply(0, priceArray)
@@ -25,8 +25,8 @@ export default {
 
     for (let i = price.length - 1; i >= 0; i--) {
       data.push({
-        date: new Date(price[i].date),
-        count: price[i].price
+        date: new Date(price[i][0]),
+        count: price[i][1]
       })
     }
 

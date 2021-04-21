@@ -6,7 +6,7 @@ export const state = () => ({
 
 export const mutations = {
   setCurrentPrice (state, priceObj) {
-    state.currentPrice = priceObj.prices[0].price
+    state.currentPrice = priceObj.usd
     state.marketStats = priceObj
   },
   setDailyHistoryPrice (state, priceObj) {
@@ -29,14 +29,15 @@ export const getters = {
 export const actions = {
   async updateCurrentPrice ({ commit }) {
     const data = await this.$axios.$get(
-      'https://price.nknx.org/price?quote=NKN&currency=USD,ETH'
+      'https://api.coingecko.com/api/v3/simple/token_price/ethereum?contract_addresses=0x5cf04716ba20127f1e2297addcf4b5035000c9eb&vs_currencies=usd%2Ceth&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=false'
     )
-    commit('setCurrentPrice', data[0])
+    console.log(data['0x5cf04716ba20127f1e2297addcf4b5035000c9eb'])
+    commit('setCurrentPrice', data['0x5cf04716ba20127f1e2297addcf4b5035000c9eb'])
   },
   async updateDailyHistoryPrice ({ commit }) {
     const data = await this.$axios.$get(
-      'https://price.nknx.org/history?quote=NKN&currency=USD,ETH&aggregate=days'
+      'https://api.coingecko.com/api/v3/coins/nkn/market_chart?vs_currency=usd&days=30&interval=daily'
     )
-    commit('setDailyHistoryPrice', data[0])
+    commit('setDailyHistoryPrice', data.prices)
   }
 }
