@@ -125,5 +125,7 @@ export default {
   API: 'API',
   transferedName: 'Átadott név',
   initialIssueAddress: 'Initial Issue Address',
-  genesisWalletAddress: 'Genesis Wallet Address'
+  genesisWalletAddress: 'Genesis Wallet Address',
+  senderWallet: 'Küldő pénztárca',
+  version: 'Változat'
 }
