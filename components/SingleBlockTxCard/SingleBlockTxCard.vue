@@ -490,6 +490,24 @@
             {{ tx.payload.registration_fee | nknValue | commaNumber }} NKN
           </div>
         </div>
+        <div class="card__item">
+          <div class="card__title">{{ $t('sender') }}</div>
+          <div class="card__text text_size_md">
+          {{ tx.payload.sender}}
+          </div>
+        </div>
+        <div class="card__item">
+          <div class="card__title">{{ $t('senderWallet') }}</div>
+          <div class="card__text text_size_md">
+          {{ tx.payload.senderWallet  }}
+          </div>
+        </div>
+        <div v-show="tx.payload.version" class="card__item">
+          <div class="card__title">{{ $t('version') }}</div>
+          <div class="card__text text_size_md">
+          {{ tx.payload.version }}
+          </div>
+        </div>
       </template>
     </div>
   </Card>

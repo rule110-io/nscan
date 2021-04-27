@@ -125,5 +125,7 @@ export default {
   API: 'API',
   transferedName: 'Siirretty nimi',
   initialIssueAddress: 'Initial Issue Address',
-  genesisWalletAddress: 'Genesis Wallet Address'
+  genesisWalletAddress: 'Genesis Wallet Address',
+  senderWallet: 'Lähettäjän lompakko',
+  version: 'Versio'
 }

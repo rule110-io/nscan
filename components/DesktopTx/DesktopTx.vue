@@ -253,12 +253,16 @@
         <template v-if="tx.txType === 'GENERATE_ID_TYPE' && tx.payload">
           <div class="desktop-tx__content">
             <div class="desktop-tx__item text_align_center">
-              <div class="desktop-tx__title">{{ $t('publicKey') }}</div>
-              {{ tx.payload.public_key }}
+              <div class="desktop-tx__title">{{ $t('senderWallet') }}</div>
+                {{ tx.payload.senderWallet}}
             </div>
             <div class="desktop-tx__item text_align_center">
               <div class="desktop-tx__title">{{ $t('registrationFee') }}</div>
               {{ tx.payload.registration_fee | nknValue | commaNumber }} NKN
+            </div>
+            <div class="desktop-tx__item text_align_center">
+              <div class="desktop-tx__title">{{ $t('publicKey') }}</div>
+              {{ tx.payload.public_key }}
             </div>
           </div>
         </template>

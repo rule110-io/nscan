@@ -125,5 +125,7 @@ export default {
   API: 'API',
   transferedName: 'Tên đã chuyển',
   initialIssueAddress: 'Initial Issue Address',
-  genesisWalletAddress: 'Genesis Wallet Address'
+  genesisWalletAddress: 'Genesis Wallet Address',
+  senderWallet: 'Gửi ví',
+  version: 'Phiên bản'
 }
