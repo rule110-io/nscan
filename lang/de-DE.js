@@ -126,6 +126,6 @@ export default {
   transferedName: 'Übertragener Name',
   initialIssueAddress: 'Initial Issue Address',
   genesisWalletAddress: 'Genesis Wallet Address',
-  senderWallet: 'Absender-Brieftasche',
-  version: 'Ausführung'
+  senderWallet: 'Absender Wallet',
+  version: 'Version'
 }
