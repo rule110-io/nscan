@@ -125,5 +125,7 @@ export default {
   API: 'API',
   transferedName: 'Transferred name',
   initialIssueAddress: 'Initial Issue Address',
-  genesisWalletAddress: 'Genesis Wallet Address'
+  genesisWalletAddress: 'Genesis Wallet Address',
+  senderWallet: 'Sender Wallet',
+  version: 'Version'
 }

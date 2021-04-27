@@ -254,6 +254,24 @@
           {{ tx.payload.registration_fee | nknValue | commaNumber }} NKN
         </div>
       </DesktopCard>
+      <DesktopCard width="half">
+        <div class="card__title">{{ $t('sender') }}</div>
+        <div class="desktop-card__item">
+          {{ tx.payload.sender}}
+        </div>
+      </DesktopCard>
+      <DesktopCard width="half">
+        <div class="card__title">{{ $t('senderWallet') }}</div>
+        <div class="desktop-card__item">
+          {{ tx.payload.senderWallet  }}
+        </div>
+      </DesktopCard>
+      <DesktopCard v-show="tx.payload.version" width="half">
+        <div class="card__title">{{ $t('version') }}</div>
+        <div class="desktop-card__item">
+          {{ tx.payload.version }}
+        </div>
+      </DesktopCard>
     </DesktopCardContainer>
 
     <!-- Nanopay -->
