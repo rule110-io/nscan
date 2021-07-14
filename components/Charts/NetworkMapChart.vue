@@ -39,8 +39,8 @@ export default {
     })
     countries.forEach((country) => {
       countriesData.push({
-        id: country.country_code,
-        value: country.count
+        id: country.Country,
+        value: country.Count
       })
     })
     const chart = am4core.create(this.$refs.chartdiv, am4maps.MapChart)

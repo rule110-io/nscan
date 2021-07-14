@@ -47,17 +47,35 @@ export const actions = {
     commit('setNetworkCounts', data)
   },
   async updateNetworkStats ({ commit }) {
-    const data = await this.$axios.$get('https://api.nknx.org/network/stats')
+    const data1 = await this.$axios.$get('https://api.nkn.org/v1/geo/summary')
+    let nodecounts = 0
+    data1.Payload.summary.forEach((element) => {
+      nodecounts = nodecounts + element.Count
+    })
+
+    const data = {
+      totalNodes: nodecounts,
+      totalCountries: data1.Payload.summary.length,
+      totalProviders: 0
+    }
     commit('setNetworkStats', data)
   },
   async updateNetworkCities ({ commit }) {
-    const data = await this.$axios.$get('https://api.nknx.org/network/cities')
-    commit('setNetworkCities', data)
+    const data1 = await this.$axios.$get('https://api.nkn.org/v1/geo/summary')
+    const cities = []
+    data1.Payload.summary.forEach((element) => {
+      element.Cities.forEach((element2) => {
+        cities.push(element2)
+      })
+    })
+    commit('setNetworkCities', cities)
   },
   async updateNetworkCountries ({ commit }) {
-    const data = await this.$axios.$get(
-      'https://api.nknx.org/network/countries'
-    )
-    commit('setNetworkCountries', data)
+    const data1 = await this.$axios.$get('https://api.nkn.org/v1/geo/summary')
+    const countries = []
+    data1.Payload.summary.forEach((element) => {
+      countries.push(element)
+    })
+    commit('setNetworkCountries', countries)
   }
 }

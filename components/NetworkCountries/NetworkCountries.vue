@@ -12,14 +12,14 @@
       <tbody class="network-countires__data">
         <tr
           v-for="(country, i) in filterCountries"
-          :key="country.country_code"
+          :key="country.Country"
           class="network-countries__row network-countries__row_type_data"
         >
           <td class="network-countries__item">{{i + 1}}</td>
           <td class="network-countries__item network-countries__item_country text_wrap_none">
             <CountryFlag
               class="network-countries__flag"
-              :country="country.country_code"
+              :country="country.Country"
               size="normal"
             />
             <span class="network-countries__country">{{country.country_name}}</span>
@@ -86,7 +86,7 @@ export default {
     this.countries = this.networkCountries
 
     this.countries.forEach((country) => {
-      country.country_name = CountryNames.getName(country.country_code, locale)
+      country.country_name = CountryNames.getName(country.Country, locale)
     })
   },
   methods: {

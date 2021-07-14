@@ -1,11 +1,11 @@
 <template>
   <div class="network-nodes">
     <div class="network-nodes__wrapper">
-      <h2 class="network-nodes__title">{{ $t('networkMap') }}</h2>
+      <!-- <h2 class="network-nodes__title">{{ $t('networkMap') }}</h2>
       <p class="network-nodes__subtitle">
         {{ $t('updateTime') }}:
         {{ $moment(networkStats.updatedTime + 'Z').fromNow() }}
-      </p>
+      </p> -->
       <div class="network-nodes__data">
         <div class="network-nodes__data-item">
           <h6 class="network-nodes__data-title">{{ $t('consensusNodes') }}</h6>
@@ -26,8 +26,8 @@
           </div>
         </div>
       </div>
-      <NetworkMapChart class="network-nodes__map" />
-      <NetworkCountries />
+      <!-- <NetworkMapChart class="network-nodes__map" />
+      <NetworkCountries /> -->
     </div>
   </div>
 </template>
@@ -38,11 +38,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import NetworkMapChart from '~/components/Charts/NetworkMapChart'
-import NetworkCountries from '~/components/NetworkCountries/NetworkCountries'
+// import NetworkMapChart from '~/components/Charts/NetworkMapChart'
+// import NetworkCountries from '~/components/NetworkCountries/NetworkCountries'
 
 export default {
-  components: { NetworkMapChart, NetworkCountries },
+  components: { },
   data: () => {
     return {}
   },
