@@ -134,7 +134,7 @@ export default {
       this.recieverWallet = sigchain.destPubkey
       this.miners = sigchainElemns.filter(i => i.mining !== false)
 
-      this.getGeo(sigchainElemns)
+      // this.getGeo(sigchainElemns)
     },
     toggleChain () {
       this.fullChain = !this.fullChain
