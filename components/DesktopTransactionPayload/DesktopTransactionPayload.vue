@@ -134,6 +134,29 @@
       </DesktopCard>
     </DesktopCardContainer>
 
+    <!-- Unsubscription -->
+    <DesktopCardContainer
+      v-if="tx.txType === 'UNSUBSCRIBE_TYPE' && tx.payload"
+      class="desktop-block-transactions"
+    >
+      <DesktopCard width="full">
+        <div class="card__title">{{ $t('subscriber') }}</div>
+        <div class="desktop-card__item">{{ tx.payload.subscriber }}</div>
+      </DesktopCard>
+      <DesktopCard width="quarter">
+        <div class="card__title">{{ $t('identifier') }}</div>
+        <div class="desktop-card__item">
+          {{ tx.payload.identifier  }}
+        </div>
+      </DesktopCard>
+      <DesktopCard width="quarter">
+        <div class="card__title">{{ $t('topic') }}</div>
+        <div class="desktop-card__item">
+          {{ tx.payload.topic  }}
+        </div>
+      </DesktopCard>
+    </DesktopCardContainer>
+
     <!-- Name Registration -->
     <DesktopCardContainer
       v-if="tx.txType === 'REGISTER_NAME_TYPE' && tx.payload"

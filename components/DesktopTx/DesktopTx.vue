@@ -131,6 +131,24 @@
           </div>
         </template>
 
+        <!-- Unsubscription -->
+        <template v-if="tx.txType === 'UNSUBSCRIBE_TYPE' && tx.payload">
+          <div class="desktop-tx__content">
+            <div class="desktop-tx__item text_align_left">
+              <div class="desktop-tx__title">{{ $t('identifier') }}</div>
+              <div>{{ tx.payload.identifier  }}</div>
+            </div>
+            <div class="desktop-tx__item text_align_left">
+              <div class="desktop-tx__title">{{ $t('topic') }}</div>
+              <div>{{ tx.payload.topic  }}</div>
+            </div>
+            <div class="desktop-tx__item text_align_right">
+              <div class="desktop-tx__title">{{ $t('subscriber') }}</div>
+              <div>{{ tx.payload.subscriber }}</div>
+            </div>
+          </div>
+        </template>
+
         <!-- Name Registration -->
         <template v-if="tx.txType === 'REGISTER_NAME_TYPE' && tx.payload">
           <div class="desktop-tx__content">

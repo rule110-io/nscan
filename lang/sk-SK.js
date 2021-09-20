@@ -127,5 +127,6 @@ export default {
   initialIssueAddress: 'Initial Issue Address',
   genesisWalletAddress: 'Genesis Wallet Address',
   senderWallet: 'Vysielač peňaženka',
-  version: 'Verzia'
+  version: 'Verzia',
+  unsubscription: 'Unsubscription'
 }

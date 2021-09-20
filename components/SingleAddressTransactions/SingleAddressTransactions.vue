@@ -70,6 +70,10 @@ export default {
           value: 'SUBSCRIBE_TYPE'
         },
         {
+          title: 'unsubscription',
+          value: 'UNSUBSCRIBE_TYPE'
+        },
+        {
           title: 'generateId',
           value: 'GENERATE_ID_TYPE'
         },

@@ -127,5 +127,6 @@ export default {
   initialIssueAddress: 'Initial Issue Address',
   genesisWalletAddress: 'Genesis Wallet Address',
   senderWallet: '发件人钱包',
-  version: '版本'
+  version: '版本',
+  unsubscription: 'Unsubscription'
 }

@@ -127,5 +127,6 @@ export default {
   initialIssueAddress: 'Initial Issue Address',
   genesisWalletAddress: 'Genesis Wallet Address',
   senderWallet: 'Expéditeur portefeuille',
-  version: 'Version'
+  version: 'Version',
+  unsubscription: 'Unsubscription'
 }

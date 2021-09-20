@@ -127,5 +127,6 @@ export default {
   initialIssueAddress: 'Initial Issue Address',
   genesisWalletAddress: 'Genesis Wallet Address',
   senderWallet: 'Küldő pénztárca',
-  version: 'Változat'
+  version: 'Változat',
+  unsubscription: 'Unsubscription'
 }
