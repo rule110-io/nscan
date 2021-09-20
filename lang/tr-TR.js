@@ -127,5 +127,6 @@ export default {
   initialIssueAddress: 'Initial Issue Address',
   genesisWalletAddress: 'Genesis Wallet Address',
   senderWallet: 'Gönderen cüzdanı',
-  version: 'sürüm'
+  version: 'sürüm',
+  unsubscription: 'Unsubscription'
 }

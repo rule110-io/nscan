@@ -323,6 +323,12 @@ a {
         }
       }
 
+      &_unsubscription {
+        path {
+          fill: $tx-unsubscription-color;
+        }
+      }
+
       &_wallet-name-registration {
         path {
           fill: $tx-wallet-name-registration-color;
@@ -622,6 +628,12 @@ a {
       &_subscription {
         &:before {
           background-color: $tx-subscription-color;
+        }
+      }
+
+      &_unsubscription {
+        &:before {
+          background-color: $tx-unsubscription-color;
         }
       }
 

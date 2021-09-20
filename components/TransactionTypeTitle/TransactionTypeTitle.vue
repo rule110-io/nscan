@@ -46,6 +46,10 @@ export default {
         this.title = 'subscription'
         this.className = 'subscription'
         break
+      case 'UNSUBSCRIBE_TYPE':
+        this.title = 'unsubscription'
+        this.className = 'unsubscription'
+        break
       case 'REGISTER_NAME_TYPE':
         this.title = 'walletNameRegistration'
         this.className = 'wallet-name-registration'

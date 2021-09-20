@@ -17,6 +17,8 @@
                   ? 'sigchain'
                   : tx.txType == 'SUBSCRIBE_TYPE'
                   ? 'subscription'
+                  : tx.txType == 'UNSUBSCRIBE_TYPE'
+                  ? 'unsubscription'
                   : tx.txType == 'GENERATE_ID_TYPE'
                   ? 'generate-id'
                   : tx.txType == 'NANO_PAY_TYPE'
@@ -49,6 +51,9 @@
               </span>
               <span v-else-if="tx.txType == 'SUBSCRIBE_TYPE'">
                 {{ $t('subscription') }}
+              </span>
+              <span v-else-if="tx.txType == 'UNSUBSCRIBE_TYPE'">
+                {{ $t('unsubscription') }}
               </span>
               <span v-else-if="tx.txType == 'GENERATE_ID_TYPE'">
                 {{ $t('generateId') }}

@@ -41,8 +41,8 @@ export const actions = {
   async updateLatestTransactions ({ commit, dispatch }) {
     const data = await this.$axios.$get('transactions')
     const latestTxs = data.transactions.data.slice(0, 5)
-    const latestSigchain = latestTxs.find(tx => tx.txType === 'SIG_CHAIN_TXN_TYPE')
-    dispatch('updateLatestSigchain', latestSigchain)
+    // const latestSigchain = latestTxs.find(tx => tx.txType === 'SIG_CHAIN_TXN_TYPE')
+    // dispatch('updateLatestSigchain', latestSigchain)
 
     commit('setLatestTransactions', latestTxs)
 

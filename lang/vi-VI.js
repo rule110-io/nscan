@@ -127,5 +127,6 @@ export default {
   initialIssueAddress: 'Initial Issue Address',
   genesisWalletAddress: 'Genesis Wallet Address',
   senderWallet: 'Gửi ví',
-  version: 'Phiên bản'
+  version: 'Phiên bản',
+  unsubscription: 'Unsubscription'
 }

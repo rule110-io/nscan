@@ -128,6 +128,26 @@
       </Card>
     </CardContainer>
 
+    <!-- Unsubscription -->
+    <CardContainer v-if="tx.txType === 'UNSUBSCRIBE_TYPE'">
+      <Card>
+        <div class="card__title">{{ $t('subscriber') }}</div>
+        <div class="card__text text_size_md">{{ tx.payload.subscriber }}</div>
+      </Card>
+      <Card>
+        <div class="card__title">{{ $t('identifier') }}</div>
+        <div class="card__text text_size_md">
+          {{ tx.payload.identifier  }}
+        </div>
+      </Card>
+      <Card>
+        <div class="card__title">{{ $t('topic') }}</div>
+        <div class="card__text text_size_md">
+          {{ tx.payload.topic  }}
+        </div>
+      </Card>
+    </CardContainer>
+
     <!-- Name Registration -->
     <CardContainer v-if="tx.txType === 'REGISTER_NAME_TYPE'">
       <Card>

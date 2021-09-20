@@ -46,6 +46,10 @@
         background-color: $tx-subscription-color;
       }
 
+      &_unsubscription {
+        background-color: $tx-unsubscription-color;
+      }
+
       &_walletNameRegistration {
         background-color: $tx-wallet-name-registration-color;
       }
