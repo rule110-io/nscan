@@ -74,7 +74,7 @@ export const actions = {
 
     channel.bind('sig-chain-tx', ({ transaction }) => {
       commit('addTx', transaction)
-      dispatch('updateLatestSigchain', transaction)
+      // dispatch('updateLatestSigchain', transaction)
     })
 
     channel.bind('subscribe-tx', ({ transaction }) => {
