@@ -6,9 +6,6 @@
         latestBlocks &&
         latestTransactions &&
         dailyHistoryPrice &&
-        networkCities &&
-        networkCountries &&
-        networkStats &&
         networkCounts
     "
   >
