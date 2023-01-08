@@ -111,7 +111,7 @@ export default {
   publicKey: 'Public Key',
   registrationFee: 'Registration Fee',
   generateId: 'ID Generation',
-  nknxVault: 'NKNx Vault - the NKN Desktop wallet',
+  nknxVault: 'Vault - the NKN Desktop wallet',
   nknxVanity: 'NKNx Vanity - create your own wallet address',
   nanopay: 'Nano Pay',
   sender: '送信者',

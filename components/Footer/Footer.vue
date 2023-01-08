@@ -45,7 +45,7 @@
           <a class="footer__nav-link" href="http://nstatus.org" target="_blank">{{ $t("nStatus") }}</a>
           <a
             class="footer__nav-link"
-            href="https://vault.nknx.org"
+            href="https://vault.rule110.io"
             target="_blank"
           >{{ $t("nknxVault") }}</a>
           <a
@@ -53,11 +53,6 @@
             href="https://vanity.nknx.org"
             target="_blank"
           >{{ $t("nknxVanity") }}</a>
-          <a
-            class="footer__nav-link"
-            href="https://www.nknx.org"
-            target="_blank"
-          >{{ $t("nknxNodeManager") }}</a>
         </div>
       </div>
       <div class="footer__bottom">

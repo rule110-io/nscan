@@ -111,7 +111,7 @@ export default {
   publicKey: 'Julkinen avain',
   registrationFee: 'Rekisteröitymismaksu',
   generateId: 'ID:n luonti',
-  nknxVault: 'NKNx Vault - the NKN Desktop wallet',
+  nknxVault: 'Vault - the NKN Desktop wallet',
   nknxVanity: 'NKNx Vanity - create your own wallet address',
   nanopay: 'Nano Pay',
   sender: 'Lähettäjä',
