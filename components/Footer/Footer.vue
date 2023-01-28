@@ -42,6 +42,11 @@
         </div>
         <div class="footer__nav-item">
           <div class="footer__nav-title">{{ $t("otherHelpfulTools") }}</div>
+          <a
+            class="footer__nav-link"
+            href="https://www.nknx.org"
+            target="_blank"
+          >{{ $t("nknxNodeManager") }}</a>
           <a class="footer__nav-link" href="http://nstatus.org" target="_blank">{{ $t("nStatus") }}</a>
           <a
             class="footer__nav-link"
