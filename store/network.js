@@ -48,13 +48,12 @@ export const actions = {
   },
   async updateNetworkStats ({ commit }) {
     const data1 = await this.$axios.$get('https://api.nkn.org/v1/geo/summary')
-    let nodecounts = 0
-    data1.Payload.summary.forEach((element) => {
-      nodecounts = nodecounts + element.Count
-    })
+    const data2 = await this.$axios.$get('https://api.nkn.org/v1/node-sampler')
+
+
 
     const data = {
-      totalNodes: nodecounts,
+      totalNodes: data2.nodesEstimated,
       totalCountries: data1.Payload.summary.length,
       totalProviders: 0
     }
