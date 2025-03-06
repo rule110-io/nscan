@@ -71,7 +71,25 @@ export default {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
       }
-    ]
+    ],
+    script: [
+      {
+        hid: 'google-analytics',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-16JQ6K5NP0',
+        async: true
+      },
+      {
+        hid: 'google-analytics-inline',
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-16JQ6K5NP0', { 'anonymize_ip': true });
+        `,
+        type: 'text/javascript'
+      }
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
 
   /*
